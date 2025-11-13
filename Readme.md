@@ -4,11 +4,15 @@
 ## Main Highlight
 **Todo and countdown module**
 ---
-[todo-lists](https://github.com/Harsh-bin/waybar-todo-lists)
 ![todo-lists](preview/img/todo.png)
 
-[waybar-countdown](https://github.com/Harsh-bin/waybar-countdown)
+[todo-lists](https://github.com/Harsh-bin/waybar-todo-lists)
+
 ![Countdown](preview/img/countdown.png)
+
+[waybar-countdown](https://github.com/Harsh-bin/waybar-countdown)
+
+https://github.com/user-attachments/assets/ec85c3a8-c41b-4f05-ad4e-673fc026023e
 
 ---
 
