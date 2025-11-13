@@ -1,0 +1,54 @@
+/*style_9*/
+
+* {
+    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: #3c3836;
+    border: 2px solid #504945;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 15px;
+}
+
+#input {
+    background-color: #282828;
+    color: #ebdbb2; 
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+#input:focus {
+    box-shadow: 0 0 0 2px #83a598; 
+}
+
+#scroll {
+    margin-top: 5px;
+}
+
+#entry {
+    padding: 8px;
+    border-radius: 0;
+    color: #ebdbb2;
+    background-color: transparent;
+}
+
+#entry:selected {
+    border: 2px solid #83a598;
+}
+
+#text:selected {
+    color: #ebdbb2;            
+}
+
+#text {
+    padding: 0px 5px;
+}

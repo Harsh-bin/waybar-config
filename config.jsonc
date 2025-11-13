@@ -1,0 +1,341 @@
+  /////////////////////////////////
+  //                             //
+  //  // Waybar configuration//  //
+  //                             //
+  /////////////////////////////////
+
+  {
+      "layer": "top",
+      "position": "bottom",
+      "height": 38,
+      "spacing": 2,
+      "margin-top": 0,
+      "margin-bottom": 0,
+      "reload_style_on_change": true,
+
+      /////////////////////////////////////////////
+      //                                         //
+      //  // Choose the order of the modules //  //
+      //                                         //
+      /////////////////////////////////////////////
+
+      "modules-left": ["custom/launcher", "custom/chrome", "custom/terminal", "custom/code", "custom/music", "custom/thunar", "custom/todo"],
+      "modules-center": ["wlr/taskbar"],
+      "modules-right": ["keyboard-state", "custom/countdown", "group/group-tools", "pulseaudio", "backlight", "tray", "clock", "group/group-power"],
+
+
+      ///////////////////////////////////
+      //                               //
+      //  // Modules configuration//   //
+      //                               //
+      ///////////////////////////////////
+
+
+      "wlr/taskbar":
+      {
+          "format": "{icon}",
+          "icon-size": 20,
+          "icon-theme": "Numix-Circle",
+          "tooltip-format": "{title:.50}",
+          "on-click": "minimize-raise",
+          "on-click-middle": "close",
+          "on-click-right": "fullscreen"
+      },
+
+      "ext/workspaces":
+      {
+          "format": "{icon}",
+          "format-icons":
+          {
+              "urgent": "",
+              "active": "",
+              "default": ""
+          },
+          "sort-by-number": true,
+          "on-click": "activate"
+      },
+
+      "keyboard-state":
+      {
+          "capslock": true,
+          "format": "{icon}",
+          "format-icons":
+          {
+              "locked": " Caps ",
+              "unlocked": ""
+          }
+      },
+
+      "idle_inhibitor":
+      {
+          "format": "{icon}",
+          "format-icons":
+          {
+              "activated": "",
+              "deactivated": ""
+          }
+      },
+
+      "tray":
+      {
+          "icon-size": 20,
+          "spacing": 10
+      },
+
+      "clock":
+      {
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format-alt": "{:%d-%m-%Y}",
+          "format": "{:%I:%M %p}"
+      },
+
+      "backlight":
+      {
+          "device": "acpi_video0", // Assuming acpi_video0, adjust if needed
+          "tooltip": false,
+          "format": "{percent}% {icon}",
+          "format-icons": ["", ""],
+          "on-scroll-up": "brightnessctl s +5%",
+          "on-scroll-down": "brightnessctl s 5%-"
+      },
+
+      "pulseaudio":
+      {
+          "format": "{volume}% {icon}",
+          "tooltip": false,
+          "format-bluetooth": "{volume}% {icon}",
+          "format-bluetooth-muted": "{icon} {format_source}",
+          "format-muted": " {format_source}",
+          "format-source": "",
+          "format-source-muted": "",
+          "format-icons":
+          {
+              "headphone": "",
+              "hands-free": "",
+              "headset": "",
+              "phone": "",
+              "portable": "",
+              "car": "",
+              "default": ["", "", ""]
+          },
+          "on-click": "bash ~/.config/waybar/scripts/nowplaying.sh >/dev/null 2>&1 &",
+          "on-click-right": "pavucontrol"
+      },
+
+
+      ///////////////////////////
+      //                       //
+      //  // Custom module //  //
+      //                       //
+      ///////////////////////////  
+
+
+      "custom/countdown":
+      {
+          "exec": "~/.config/waybar/scripts/countdown/countdown.sh",
+          "return-type": "json",
+          "format": "{}",
+          "interval": 3600,
+          "on-click-right": "foot bash ~/.config/waybar/scripts/countdown/countdown.sh interactive",
+          "on-scroll-up": "~/.config/waybar/scripts/countdown/countdown.sh scroll-up",
+          "on-scroll-down": "~/.config/waybar/scripts/countdown/countdown.sh scroll-down"
+      },
+
+      "group/group-tools":
+      {
+          "orientation": "inherit",
+          "drawer":
+          {
+              "transition-duration": 500,
+              "children-class": "other-apps",
+              "transition-left-to-right": false
+          },
+          "modules": [
+              "custom/snip",
+              "idle_inhibitor",
+              "custom/clip",
+              "custom/galculator",
+              "custom/taskmanager"
+
+          ]
+      },
+
+      "custom/todo":
+      {
+          "format": "\u00a0{}",
+          "exec": "~/.config/waybar/scripts/todo/todo.sh",
+          "on-double-click": "~/.config/waybar/scripts/todo/todo.sh mark_done",
+          "on-click-right": "~/.config/waybar/scripts/todo/todo.sh open_tui",
+          "on-click-middle": "~/.config/waybar/scripts/todo/todo.sh middle_click",
+          "return-type": "json",
+          "interval": 5,
+          "tooltip": true
+      },
+
+
+      ///////////////////////////
+      //                       //
+      //  // Apps section //   //
+      //                       //
+      ///////////////////////////
+
+
+      "group/group-apps":
+      {
+          "orientation": "inherit",
+          "drawer":
+          {
+              "transition-duration": 500,
+              "children-class": "other-apps",
+              "transition-left-to-right": true
+          },
+          "modules": [
+              "custom/chrome",
+              "custom/terminal",
+              "custom/music",
+              "custom/thunar"
+          ]
+      },
+
+      "custom/launcher":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Menu\nRight click to change theme",
+          "on-click": "killall wofi 2>/dev/null || wofi --show drun",
+          "on-click-right": "bash ~/.config/waybar/scripts/theme.sh"
+      },
+
+      "custom/chrome":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Browser",
+          "on-click": "google-chrome-stable",
+          "on-click-right": "chromium",
+          "on-click-middle": "brave"
+      },
+
+      "custom/terminal":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Terminal",
+          "on-click": "xfce4-terminal",
+          "on-click-right": "foot"
+      },
+
+      "custom/code":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Code Editor",
+          "on-click": "/opt/sublime_text/sublime_text"
+      },
+
+      "custom/taskmanager":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Task Manager",
+          "on-click": "xfce4-taskmanager"
+      },
+
+      "custom/galculator":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Galculator",
+          "on-click": "galculator"
+      },
+
+      "custom/music":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Music",
+          "on-click": "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify --uri=%U >/dev/null 2>&1 &",
+          "on-click-right": "g4music"
+      },
+
+      "custom/thunar":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "File Manager",
+          "on-click": "thunar"
+      },
+
+      "custom/snip":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Screenshot",
+          "on-click": "grim -g \"$(slurp)\" ~/Pictures/$(date +%s).png"
+      },
+
+      "custom/clip":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Clipboard",
+          "on-click": "killall wofi 2>/dev/null || cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+      },
+
+
+      ///////////////////////////
+      //                       //
+      //  // Power section //  //
+      //                       //
+      ///////////////////////////
+
+
+      "group/group-power":
+      {
+          "orientation": "inherit",
+          "drawer":
+          {
+              "transition-duration": 500,
+              "children-class": "not-power",
+              "transition-left-to-right": false
+          },
+          "modules": [
+              "custom/power",
+              "custom/quit",
+              "custom/lock",
+              "custom/reboot"
+          ]
+      },
+
+      "custom/quit":
+      {
+          "format": "󰗼",
+          "tooltip": true,
+          "tooltip-format": "Logout",
+          "on-click": "bash ~/.config/waybar/scripts/power.sh --logout"
+      },
+
+      "custom/lock":
+      {
+          "format": "󰍁",
+          "tooltip": true,
+          "tooltip-format": "Lock",
+          "on-click": "bash ~/.config/waybar/scripts/lock.sh"
+      },
+
+      "custom/reboot":
+      {
+          "format": "󰜉",
+          "tooltip": true,
+          "tooltip-format": "Reboot",
+          "on-click": "bash ~/.config/waybar/scripts/power.sh --reboot"
+      },
+
+      "custom/power":
+      {
+          "format": "",
+          "tooltip": true,
+          "tooltip-format": "Shutdown",
+          "on-click": "bash ~/.config/waybar/scripts/power.sh --shutdown"
+      }
+  }

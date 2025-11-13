@@ -1,0 +1,154 @@
+/*style_8*/
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.7);
+    color: #c0caf5;
+    border-top: 2px solid rgba(65, 72, 104, 0.8);
+}
+
+tooltip {
+     border-radius: 12px;
+     background-color: rgba(36, 40, 59, 0.9);
+     border: 1px solid #e0af68;
+}
+
+#clock,
+#custom-todo,
+#custom-countdown,
+#backlight,
+#pulseaudio,
+#custom-clip,
+#custom-taskmanager,
+#custom-galculator,
+#custom-snip,
+#tray,
+#idle_inhibitor,
+#custom-power,
+#custom-reboot,
+#custom-quit,
+#custom-lock,
+#custom-launcher {
+    background-color: rgba(40, 44, 63, 0.6);
+    padding: 2px 12px;
+    margin: 4px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Modules: App Launcher Strip */
+#custom-chrome,
+#custom-terminal,
+#custom-code,
+#custom-music,
+#custom-thunar {
+    background-color: rgba(40, 44, 63, 0.6);
+    padding: 2px 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 0;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#custom-chrome {
+    margin-left: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+#custom-thunar {
+    margin-right: 4px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Modules: Hover Effects */
+#clock:hover,
+#custom-todo:hover,
+#custom-countdown:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#custom-clip:hover,
+#custom-snip:hover,
+#custom-chrome:hover,
+#custom-terminal:hover,
+#custom-code:hover,
+#custom-music:hover,
+#custom-taskmanager:hover,
+#custom-galculator:hover,
+#custom-thunar:hover,
+#tray:hover,
+#idle_inhibitor:hover,
+#custom-launcher:hover {
+    background-color: rgba(65, 72, 104, 0.9);
+    border-color: #e0af68;
+}
+
+#pulseaudio.muted:hover {
+    border-color: #f7768e;
+}
+
+#custom-power:hover {
+    background-color: rgba(65, 72, 104, 0.9);
+    border-color: #f7768e; 
+}
+
+#custom-reboot:hover,
+#custom-quit:hover,
+#custom-lock:hover {
+    background-color: rgba(65, 72, 104, 0.9);
+    border-color: #7aa2f7; 
+}
+
+/* Modules: Specific Styles */
+#custom-countdown,
+#custom-todo,
+#clock {
+    font-weight: bold;
+    color: #e0af68;
+}
+
+#keyboard-state {
+    background: transparent;
+}
+
+#keyboard-state label.locked {
+    background-color: rgba(65, 72, 104, 0.9);
+    border: 1px solid #e0af68; 
+    color: #c0caf5;
+    padding: 0px 12px;
+    margin: 4px 0px;
+    border-radius: 8px;
+}
+
+#taskbar {
+    background: rgba(40, 44, 63, 0.6);
+    padding: 0px 8px;
+    margin: 4px;
+    border-radius: 8px;
+    border: 1px solid rgba(65, 72, 104, 0.8);
+}
+
+#taskbar button {
+    background: transparent;
+    padding: 0 8px;
+    margin: 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+#taskbar button:hover {
+    border-bottom-color: #e0af68;
+}
+
+#taskbar button.active {
+    background: rgba(65, 72, 104, 0.9);
+    border-bottom-color: #e0af68;
+}

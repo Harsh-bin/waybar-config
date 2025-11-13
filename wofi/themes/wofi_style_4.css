@@ -1,0 +1,55 @@
+/*style_4*/
+
+* {
+    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: #e9ede6; 
+    border: 2px solid #3a6b57; 
+    border-radius: 12px;      
+    margin: 10px;
+    padding: 15px;
+}
+
+#input {
+    background-color: #f4f6f3; 
+    color: #4a4a4a;            
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#input:focus {
+    box-shadow: 0 0 0 2px #3a6b57; 
+}
+
+#scroll {
+    margin-top: 5px;
+}
+
+#entry {
+    padding: 8px;
+    border-radius: 8px;
+    color: #4a4a4a;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #3a6b57; 
+    font-weight: bold;
+}
+
+#text:selected {
+    color: #f4f6f3;            
+}
+
+#text {
+    padding: 0px 5px;
+}

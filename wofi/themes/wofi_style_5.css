@@ -1,0 +1,54 @@
+/*style_5*/
+
+* {
+    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border: none;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: #ede6de; 
+    border: 1px solid #d5a6a6; 
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+}
+
+#input {
+    background-color: #f9f5f1; 
+    color: #3f3f3f;            
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#input:focus {
+    box-shadow: 0 0 0 1px #d5a6a6;
+}
+
+#scroll {
+    margin-top: 5px;
+}
+
+#entry {
+    padding: 8px;
+    border-radius: 8px;
+    color: #3f3f3f;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #d5a6a6; 
+}
+
+#text:selected {
+    color: #ffffff;           
+}
+
+#text {
+    padding: 0px 5px;
+}

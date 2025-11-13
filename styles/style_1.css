@@ -1,0 +1,142 @@
+/*style_1*/
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #1e222a; 
+    color: #abb2bf;     
+}
+
+tooltip {
+     border-radius: 10px;
+     background-color: #282c34;
+     border: 1px solid #61afef;
+}
+
+/* Modules: Base Style */
+#clock,
+#custom-todo,
+#custom-countdown,
+#backlight,
+#pulseaudio,
+#custom-clip,
+#custom-snip,
+#custom-taskmanager,
+#custom-galculator,
+#tray,
+#idle_inhibitor,
+#custom-power,
+#custom-reboot,
+#custom-quit,
+#custom-lock,
+#custom-launcher {
+    background: #282c34; 
+    padding: 3px 13px;
+    margin: 4px;
+    border-radius: 8px;
+    transition: color 0.3s ease;
+}
+
+/* Modules: App Launcher Strip */
+#custom-chrome,
+#custom-terminal,
+#custom-code,
+#custom-music,
+#custom-thunar {
+    background: #282c34;
+    padding: 3px 13px;
+    margin-top: 4px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    border-radius: 0;
+    transition: color 0.3s ease;
+}
+
+#custom-chrome {
+    margin-left: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+#custom-thunar {
+    margin-right: 4px;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Modules: Hover Effects */
+#custom-launcher:hover,
+#custom-todo:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#custom-clip:hover,
+#custom-snip:hover,
+#custom-chrome:hover,
+#custom-terminal:hover,
+#custom-code:hover,
+#custom-music:hover,
+#custom-taskmanager:hover,
+#custom-galculator:hover,
+#custom-thunar:hover,
+#tray:hover,
+#idle_inhibitor:hover,
+#custom-reboot:hover,
+#custom-quit:hover,
+#custom-lock:hover {
+    color: #61afef; 
+}
+
+#custom-power:hover {
+    color: #e06c75; 
+}
+
+/* Modules: Specific Styles */
+#clock,
+#custom-countdown,
+#custom-todo,
+#custom-launcher {
+    color: #61afef;
+    font-weight: bold;
+}
+
+#custom-power {
+    color: #c678dd; 
+}
+
+#keyboard-state {
+    background: transparent;
+}
+
+#keyboard-state label.locked {
+    background: #282c34;
+    color: #61afef; 
+    padding: 0px 12px;
+    margin: 4px 0px;
+    border-radius: 8px;
+}
+
+#taskbar {
+    background: #282c34;
+    padding: 0 5px;
+    margin: 4px;
+    border-radius: 8px;
+}
+
+#taskbar button {
+    background: transparent;
+    padding: 0 8px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s ease-out;
+}
+
+#taskbar button:hover {
+    border-bottom-color: #abb2bf; 
+}
+
+#taskbar button.active {
+    border-bottom-color: #61afef; 
+}
