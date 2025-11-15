@@ -31,6 +31,8 @@
 
 - waybar themes with matching rofi theme
 
+https://github.com/user-attachments/assets/b7c7d347-d024-439b-ac7b-c85e83ae1aaa
+
 ![Style 1](preview/img/style_1.png)
 
 ![Style 2](preview/img/style_2.png)
