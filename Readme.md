@@ -3,16 +3,14 @@
 
 ## Main Highlight
 
-- Todo and countdown module
+**Todo and countdown module**
 
----
-### todo-list
+- [todo-lists](https://github.com/Harsh-bin/waybar-todo-lists)
 
-[todo-lists](https://github.com/Harsh-bin/waybar-todo-lists)
 ![todo-lists](preview/img/todo.png)
 
-### waybar-countdown
-[waybar-countdown](https://github.com/Harsh-bin/waybar-countdown)
+- [waybar-countdown](https://github.com/Harsh-bin/waybar-countdown)
+  
 ![Countdown](preview/img/countdown.png)
 
 ---
@@ -20,9 +18,11 @@
 ### Keyboard state
 
 - caps unlock
+  
 ![](preview/img/caps.png)
 
 - caps lock
+  
 ![](preview/img/caps-lock.png)
 
 ---
